@@ -13,9 +13,9 @@
 
       <?php foreach($tasks as $task): ?>
         <tr>
-          <td><?= $task->getDescription() ?></td>
+          <td><?= $task->description ?></td>
           <td>
-            <input type="checkbox" disabled="disabled" <?= $task->isComplete() ?>>
+            <input type="checkbox" disabled="disabled" <?= $task->completed ? 'checked' : '' ?>>
           </td>
         </tr>
       <?php endforeach; ?>
