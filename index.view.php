@@ -5,20 +5,17 @@
     <title>Todo List</title>
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Task</th>
-        <th>Complete</th>
-      </tr>
-
+    <h1>TODO:</h1>
+    <ul>
       <?php foreach($tasks as $task): ?>
-        <tr>
-          <td><?= $task->description ?></td>
-          <td>
-            <input type="checkbox" disabled="disabled" <?= $task->completed ? 'checked' : '' ?>>
-          </td>
-        </tr>
+        <li>
+          <?php if ($task->completed)
+            echo "<strike>" ?>
+            <?= $task->description ?>
+          <?php if ($task->completed)
+            echo "</strike>" ?>
+        </li>
       <?php endforeach; ?>
-    </table>
+    </ul>
   </body>
 </html>
