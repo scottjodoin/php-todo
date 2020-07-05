@@ -1,23 +1,10 @@
 <?php
 
+require 'functions.php';
 require 'Task.php';
 
-//DSN
-try {
-  $pdo = new PDO('mysql:host=127.0.0.1;dbname=mytodo', 'root', '');
-} catch (PDOException $e){
-  die('Could not connect');
-}
+$pdo = connectToDb();
 
-$statement = $pdo->prepare('select * from todos');
-
-$statement->execute();
-
-
-/* FETCH_OBJ is optional, but removes useless information. FETCH_CLASS is an
- * alternative
- * #fetch also possible.
- */
-$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
+$tasks = fetchAllTasks($pdo);
 
 include 'index.view.php';
