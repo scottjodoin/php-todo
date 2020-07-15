@@ -6,4 +6,4 @@
     <link rel="stylesheet" href="/public/css/style.css">
   </head>
  </body>
-    <?php include 'views/partials/nav.php' ?>
+    <?php include 'app/views/partials/nav.php' ?>
