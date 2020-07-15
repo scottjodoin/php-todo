@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Todo List</title>
-  </head>
-  <body>
+<?php include 'views/partials/head.php' ?>
+    <?php include 'views/partials/nav.php' ?>
     <h1>TODO:</h1>
     <ul>
       <?php foreach($tasks as $task): ?>
@@ -17,5 +12,4 @@
         </li>
       <?php endforeach; ?>
     </ul>
-  </body>
-</html>
+<?php include 'views/partials/footer.php' ?>
