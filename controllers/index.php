@@ -2,7 +2,7 @@
 $title = "Home";
 
 $names = array_column(
-  $app['database']->selectAll('names'),
+  App::get('database')->selectAll('names'),
   'name'
 );
 
