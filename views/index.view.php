@@ -1,5 +1,4 @@
-<?php include 'views/partials/head.php' ?>
-    <?php include 'views/partials/nav.php' ?>
+<?php require('partials/head.php'); ?>
     <h1>TODO:</h1>
     <ul>
       <?php foreach($tasks as $task): ?>
@@ -12,4 +11,4 @@
         </li>
       <?php endforeach; ?>
     </ul>
-<?php include 'views/partials/footer.php' ?>
+<?php require('partials/footer.php'); ?>
