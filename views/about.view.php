@@ -1,4 +1,3 @@
-<?php include 'views/partials/head.php' ?>
-    <?php include 'views/partials/nav.php' ?>
+<?php require('partials/head.php'); ?>
     <h1>About</h1>
-<?php include 'views/partials/footer.php' ?>
+<?php require('partials/footer.php'); ?>

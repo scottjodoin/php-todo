@@ -1,6 +1,9 @@
 <?php
-$title = "Todo";
+$title = "Home";
 
-$tasks = $app['database']->selectAll('todos');
+$names = array_column(
+  $app['database']->selectAll('names'),
+  'name'
+);
 
 require 'views/index.view.php';
